@@ -2,6 +2,8 @@
 
 A classic Snake Game built using **HTML, CSS, and Vanilla JavaScript**.
 
+# LIVE LINK - https://kashh02.github.io/snake-game/
+
 ## 🎮 Features
 - Responsive grid-based gameplay
 - Smooth snake movement
