@@ -1,0 +1,159 @@
+/* even if we dont talk daily his msg still makes my day brighter
+and telling him to stop texting me is just so weird i mean
+future mei apne ap hi kamm ho jayega */
+
+/* you are not reaching people saamne se, if they want to talk they will. period. */
+
+/* the plan with nandini is fixed, wo jab bolegi it will be done tab */
+/* plan with mitali and soda abb wo btayenge jaise, im done doing all the work */
+/* plan wid harsh ill tell him jab nandini mekro btayegi. full stop */
+
+
+
+/* array mei objects honge hr ek snake ke block ke liye
+toh jaise wo ek block of food khayega to uski tail mei hum ek block add kr denge.
+also like har block ke coordinate store krre hai hum array of obj mei
+
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+
+    /* BG COLOR */
+    --bg-primary-color: #0c0c0c;
+    --bg-fill-color: #fdfdfc;
+    --bg-food-color: #ff3b3b;
+
+    /* TEXT COLOR */
+    --text-primary-color: #f0f0f0;
+
+    /* SPACING VARIABLES */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+
+    /* BORDER COLOR */
+    --border-primary-color:#333333;
+
+    /* BORDER-RADIUS */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-2xl: 24px;
+
+    
+
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main, section{
+    height: 100%;
+    width: 100%;
+}
+
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+section{
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* background-color: rgb(17, 17, 53); */
+    gap: var(--space-lg);
+}
+section .infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-primary-color) ;
+    border-radius: var(--border-radius-xs);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1; 
+    /* jitne space parent ke andar khaali tha usko cover krlo */
+    /* humne nhi pta kitni row h and kitni column hogi */
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,  minmax(50px, 1fr));
+    /* ek particular col ki w hogi 30px and jo jagah bach jaye usko chorh dena */
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.block{
+    /* width: 30px;
+    height: 30px; */
+    border: 1px solid var(--border-primary-color);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;     /* Always square */
+}
+
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.food{
+    background-color: #ff3b3b;
+}
+
+.modal{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #35353587;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .start-game,
+.modal .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+
+}
+
+.modal .game-over{
+    display: none;
+}
