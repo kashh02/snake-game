@@ -28,7 +28,10 @@ A classic Snake Game built using **HTML, CSS, and Vanilla JavaScript**.
 - Difficulty levels
 - Sound effects
 
-## 📷 Preview
+## 📷 Screenshot
 
+![Snake Game Screenshot](assets/preview.png)
+
+![Snake Game Gameplay](assets/gameplay.mp4)
 
 Built by **Kashish Gupta**
